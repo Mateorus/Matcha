@@ -1,13 +1,11 @@
-import axios from 'axios';
-
-const url = 'api/user';
+const axios = require('axios');
 
 export default {
   state: {
+    user: {},
     jwt: localStorage.getItem('jwt') || '',
-    user: {}
   },
   getters: {
-    loggedIn: state => !!state.jwt
+    isLogged: state => !!state.jwt,
   }
 }

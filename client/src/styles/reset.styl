@@ -1,0 +1,30 @@
+@import 'variables'
+
+*, 
+*:before, 
+*:after
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+a
+  text-decoration: none;
+
+:focus, 
+:active, 
+:hover
+  outline: none;
+
+html 
+	color: primary-color;
+	font-family: primary-font;
+	font-size: 18px;
+	@media screen and (max-width: desktopWidth) {font-size: 16px}
+	@media screen and (max-width: tableWidth) {font-size:	15px}
+	@media screen and (max-width: phoneWidth) {font-size:	14px}
+
+body
+  color: primary-color;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
