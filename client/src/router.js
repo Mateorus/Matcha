@@ -18,8 +18,26 @@ const router =  new Router({
     },
     {
       path: '/auth',
-      name: 'auth',
-      component: () => import('./views/Auth')
+      component: () => import('./views/Auth'),
+      children: [
+        {
+          path: '',
+          component: () => import('./components/Auth/Welcome')
+        },
+        {
+          path: 'signup',
+          component: () => import('./components/Auth/SignUp')
+        },
+        {
+          path: 'signin',
+          component: () => import('./components/Auth/SignIn')
+        },
+        {
+          path: 'reset-password',
+          component: () => import('./components/Auth/ResetPassword')
+        },
+
+      ]
     }
   ]
 })

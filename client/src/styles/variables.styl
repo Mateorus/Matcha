@@ -9,9 +9,10 @@ primary-color     =     #282828;
 secondary-color   =     #888;
 accent-color      =     #cc2b5e;
 accent1-color     =     #753a88;
+error-color       =     #A50203;
 white-color       =     #FFF;
 
-accent-gradient   =     linear-gradient(90deg, accent-color 60%, accent1-color);
+accent-gradient   =     linear-gradient(90deg, accent-color, accent1-color);
 
 accent-font       =     'Paytone One', sans-serif;
 primary-font      =     'Roboto', sans-serif;
@@ -20,3 +21,13 @@ gradient-text(gradient = accent-gradient)
   background: gradient;
   background-clip: text;
   color: transparent;
+
+// AMINATIONS
+
+.slide-fade-enter-active, 
+.slide-fade-leave-active
+  transition: opacity .5s
+
+.slide-fade-enter,
+.slide-fade-leave-to
+  opacity: 0

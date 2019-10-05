@@ -5,7 +5,7 @@ module.exports = {
     'style-resources-loader': {
       preProcessor: 'stylus',
       patterns: [
-        path.resolve(__dirname, 'src/assets/styles/variables.styl')
+        path.resolve(__dirname, 'src/styles/variables.styl')
       ]
     },
     devServer: {
