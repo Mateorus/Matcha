@@ -1,6 +1,10 @@
 const path = require('path');
 
 module.exports = {
+  outputDir: path.resolve(__dirname, '../public'),
+  devServer: {
+    proxy: 'http://localhost:3000/'
+  },
   pluginOptions: {
     'style-resources-loader': {
       preProcessor: 'stylus',
@@ -8,8 +12,5 @@ module.exports = {
         path.resolve(__dirname, 'src/styles/variables.styl')
       ]
     },
-    devServer: {
-      proxy: 'http://localhost:3000/'
-    }
   }
 }

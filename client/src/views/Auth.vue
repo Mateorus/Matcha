@@ -2,7 +2,9 @@
   <div id="auth-view" class='container'>
     <section id="auth-section">
       <div id="auth-header">
-        <span>matcha </span>
+        <router-link to="/auth">
+          <span>matcha </span>
+        </router-link>
         <span>| the dating service</span>
       </div>
       <vue-page-transition name="fade-in-left" class="container">

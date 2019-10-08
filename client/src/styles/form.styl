@@ -1,0 +1,75 @@
+.form-title
+    font-family: accent-font;
+    font-size: 2rem;
+    gradient-text;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    gradient-text();
+    @media screen and (max-width: phoneWidth)
+      font-size: 1.4rem;
+
+form
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 550px;
+  @media screen and (max-width: phoneWidth)
+    padding-top: 1rem;
+    justify-content: flex-start;
+    overflow-y: auto;
+
+.input-field
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 50px;
+  width: 320px;
+  margin-bottom: 1.5rem;
+  @media screen and (max-width: tableWidth)
+    height: 40px;
+    width: 280px;
+    margin-bottom: 1rem;
+
+input
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid accent1-color;
+  color: accent1-color;
+  font-size: 1.2rem;
+  height: 50%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 3px;
+  @media screen and (max-width: tableWidth)
+    font-size: 1rem;
+    
+
+label
+  gradient-text();
+  position: absolute;
+  top: 0;
+  left: 3px;
+  transition: .4s ease-in;
+  pointer-events: none;
+
+.labelUpper,
+input:focus + label
+  transform: translateY(-16px) scale(.9);
+  color: secondary-color;
+  background: transparent;
+  
+
+.form-footer
+  color: secondary-color;
+  & a
+    gradient-text();
+    font-weight: bold;
+
+.form-error
+  color: accent-color;
+  position: absolute;
+  bottom: 0;
+  left: 3px;
+ 

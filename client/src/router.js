@@ -36,8 +36,18 @@ const router =  new Router({
           path: 'reset-password',
           component: () => import('./components/Auth/ResetPassword')
         },
+        {
+          path: 'success',
+          name: 'auth-success',
+          component: () => import('./components/Auth/AuthSuccess'),
+          props: true
+        }
 
       ]
+    },
+    {
+      path: '/server-error',
+      component: () => import('./components/common/ServerError')
     }
   ]
 })
@@ -49,5 +59,9 @@ router.beforeEach((to, from, next) => {
     next();
   }
 });
+
+async function authorizeToken(next) {
+  next();
+}
 
 export default router;
